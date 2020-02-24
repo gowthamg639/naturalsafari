@@ -1,0 +1,538 @@
+<html lang="en">
+   <head>
+      <title>carousel</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans|Source+Sans+Pro:300|Work+Sans&display=swap" rel="stylesheet">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="header.css">
+   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+      <style type="text/css">
+
+      
+   body{
+      font-family: 'Work Sans';
+      user-select: none;
+   }
+   /*carousel whole wrapper*/
+
+   .wrapper {
+      width: 100%;
+      height: fit-content;
+   }
+
+   /*carousel whole wrapper*/
+
+   /*carousel inner wrapper*/
+   .inner_wrapper {
+      width: 100%;
+      height: fit-content;
+   }
+   /*carousel inner wrapper*/
+
+
+   /*carousel opacity transition start*/
+
+   .carousel-fade .carousel-inner .item {
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: .7s;
+      transition-timing-function: linear;
+   }
+
+   .carousel-fade .carousel-inner .active {
+      opacity: 1;
+      transition-timing-function: linear;
+   }
+
+   .carousel-fade .carousel-inner .active.left,
+   .carousel-fade .carousel-inner .active.right {
+      left: 0;
+      opacity: 0.9;
+      z-index: 1;
+   }
+
+   .carousel-fade .carousel-inner .next.left,
+   .carousel-fade .carousel-inner .prev.right {
+      opacity: 1;
+   }
+
+   .carousel-fade .carousel-control {
+      z-index: 2;
+   }
+
+   @media all and (transform-3d),
+   (-webkit-transform-3d) {
+      .carousel-fade .carousel-inner>.item.next,
+      .carousel-fade .carousel-inner>.item.active.right {
+         opacity: 0;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+      .carousel-fade .carousel-inner>.item.prev,
+      .carousel-fade .carousel-inner>.item.active.left {
+         opacity: 0;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+      .carousel-fade .carousel-inner>.item.next.left,
+      .carousel-fade .carousel-inner>.item.prev.right,
+      .carousel-fade .carousel-inner>.item.active {
+         opacity: 1;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+   }
+
+   /*carousel opacity transition end*/
+
+
+
+   /*carousel indicators start*/
+
+   .carousel-indicators li {
+      margin: 10px 10px 0 0;
+      background-color: rgb(232, 233, 238);
+      width: 15px;
+      height: 15px;
+      border: none;
+      transition-duration: .6s;
+      transition-timing-function: linear;
+   }
+
+   .carousel-indicators .active {
+      background-color: rgba(255, 102, 0, 1);
+      width: 15px;
+      height: 15px;
+      border: none;
+      margin: 10px 10px 0 0;
+   }
+
+   /*carousel indicators end*/
+   
+  
+
+   
+   .carousel-inner {
+      width: 100%;
+      height: 100%;
+   }
+
+   .content-container {
+      display: flex;
+      height: 100%;
+   }
+
+   .content {
+      width: 50%;
+   }
+
+   .content img {
+      height: 100%;
+   }
+
+   .left_pannel {
+      background-color: rgb(247, 247, 247);
+   }
+
+   .content_message p {
+      max-width: 376px;
+      padding: 20px 0;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #74757f;
+      height: 160px;
+      max-height:160px;
+   }
+
+   .contact_us a {
+      width: 170px;
+      background-color: rgba(255, 102, 0, 1);
+      padding: 20px 50px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      border: 2px solid rgba(255, 102, 0, 1);
+      transition-duration: .6s;
+   }
+   .contact_us a:hover{
+      color: rgba(255, 102, 0, 1);
+      background-color: rgb(242, 242, 242);
+   }
+   .contact_us{
+      margin-top: 30px;
+   }
+
+   .font-weight-bold {
+      font-weight: 700!important;
+   }
+
+   .font-weight-light {
+      font-weight: 300!important;
+      font-family: Source Sans Pro;
+   }
+
+   .content_head h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin: 0;
+   }
+
+   .welcome_message {
+      text-transform: uppercase;
+      color: rgb(174, 177, 190);
+      font-size: 16px;
+      line-height: 1.2;
+      margin: 10px auto;
+   }
+
+@media screen and (min-width: 1360px) and (max-width: 9000px) {
+   .content-panel {
+      padding: 15% 0 10% 30%;
+   }      
+   .content_head h1 {
+      font-size: 58px;
+   }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1360px) {
+   .content-panel {
+      padding: 15% 0 10% 25%;
+   }      
+   .content_head h1 {
+      font-size: 53px;
+   }
+}
+@media screen and (min-width: : 1101px) {
+   .content-panel {
+      padding: 15% 10% 15% 20%;
+   }
+   .content_head h1 {
+      font-size: 48px;
+   }
+   .content_message p {
+      max-width: 376px;
+      line-height: 1.5;
+      font-size: 14px;
+      height: 120px;
+      max-height:120px;
+   }
+}
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+   .content-panel {
+      padding: 15% 10% 15% 13%;
+   }
+   .content_head h1 {
+      font-size: 38px;
+   }
+   .content_message p {
+      max-width: 376px;
+      padding: 20px 0;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #74757f;
+      height: 160px;
+      max-height:160px;
+   }
+}
+/*@media screen and (max-width: 1000px) and (min-width: 768px) {
+   .content-panel {
+      padding: 15% 10% 15% 10%;
+   }
+}*/
+/*@media screen and (max.content {
+         width: 100%;
+      }-width: 768px) {
+   .content-panel {
+      padding: 15% 0 15% 5%;
+   }
+   .content_head h1 {
+      font-size: 30px;
+   }
+}*/
+
+/*@media screen and (min-width: 1527px) {*/    
+/*}*/
+   
+
+
+   @media screen and (max-width: 767px) {
+      .left_pannel {
+         position: absolute;
+         background-color: rgb(0, 0, 0, 0.6);
+         color: rgb(255, 255, 255);
+         z-index: 1;
+         height: 100%;
+      }
+      .content{
+          width: 100%;
+      }
+      .content_head h1 {
+         font-size: 32px;
+         line-height: 1;
+         text-align: center;
+      }
+      .welcome_message {
+         color: rgb(244, 244, 244);
+         font-size: 14px;
+         line-height: 1;
+         font-weight: bold;
+         text-align: center;
+      }
+      .inner_wrapper {
+         height: 464px;
+      }
+      .content-panel {
+         padding: 10% 10% 10% 13%;
+      }
+      .content_message p {
+         color: rgb(255,255,255,0.8);
+         width: 100%;
+         max-width: 100%;
+         text-align: center;
+      }
+      .contact_us{
+         text-align: center;
+         margin-top: 40px;         
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      .carousel-indicators {
+         text-align: right;
+         float: right;
+         left: 80%;
+         top: 10%;
+         display: flex;
+         flex-direction: column;
+         width: auto;
+      }
+   }
+
+  /* @media screen and (max-width: 400px) {
+      .content-panel {
+         padding: 1% 5% 1% 5%;
+      }
+      .content_head h1 {
+         font-size: 28px;
+         line-height: 1;
+         margin: 0;
+      }
+      .contact_us {
+         width: fit-content;
+         margin: auto;
+      }
+   }*/
+  /* @media screen and (max-width: 650px) {
+      .content-panel {
+         padding: 1% 2% 1% 2%;
+      }
+      .content_message p {
+         font-size: 14px;
+         margin: auto;
+         text-align: center;
+      }
+      .welcome_message {
+         color: rgb(244, 244, 244);
+         font-size: 14px;
+         line-height: 1;
+         margin: 20px auto;
+         text-align:center;
+      }
+      .content_head h1 {
+         font-size: 28px;
+         line-height: 1;
+         margin: 20px auto;
+         text-align: center;
+      }*/
+    /*  .contact_us a{
+         padding: 10px 35px;
+      }*/
+      /*.contact_us{
+         width: fit-content;
+         margin: 10px auto;
+      }
+      .carousel-indicators{
+         bottom: 1px;
+      }
+   }
+*/  
+/*.dummy_div{
+   height: 90px;
+}*/   
+   .nav_menu{
+      width: 30%;
+   } 
+   .nav_menu ul{
+      display: flex;
+      list-style-type: none;
+      width: 100%;
+      justify-content: space-around;
+      font-size:17px;
+   }
+   .nav_menu ul li{
+      padding: 0 15px;
+      //border:1px solid black;
+      text-align: center;
+      transition-duration: .5s;
+      cursor:pointer;
+
+   }
+   .navbar{
+      margin: 0;
+   }
+   .nav_menu ul li:hover{
+      background-color: rgba(255, 102, 0, 1);
+      color: rgba(255,255,255);
+      border-radius: 5px;
+   }
+   .nav_logo img{
+     width: 200px;
+   }
+   @media screen and (max-width: 768px) {
+      .nav_menu{
+         width: 60%;
+      }
+      .nav_menu ul{
+         width: 100%;
+         justify-content: flex-end;
+         font-size:14px;
+      }
+      .nav_menu ul li{
+         padding-left: 10px;
+      } 
+   }
+    @media screen and (max-width: 521px) {
+      .mobile_view:last-of-type{
+         display: none;
+      }
+      .nav_logo img{
+         width: 150px;
+      }
+      
+   }
+   @media screen and (max-width: 472px) {
+      .mobile_view{
+         display: none;
+      } 
+      .nav_logo img{
+         width: 120px;
+      }
+      .nav_menu{
+         width: 30%;
+      }
+       .nav_menu ul li{
+         padding-left: 8px;
+      } 
+      .nav_logo{
+         width: 60%;
+      }
+   }
+
+</style>
+   </head>
+   <body>
+  
+
+      <div class="wrapper">
+         <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="nav_logo">
+               <img src="logo.png">
+            </div>
+            <div class="nav_menu">
+               <ul>
+                  <li>HOME</li>
+                  <li class="mobile_view">MENU</li>
+                  <li>BOOKINGS</li>
+                  <li class="mobile_view">ABOUT</li>
+               </ul>
+            </div>
+         </nav>
+         <div class="inner_wrapper carousel-inner">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Welcome to our Travel agency</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Enjoy Your</span><br><span class="font-weight-bold">Dream Vacation</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>Since 1999, Hot Deals has been committed to bringing our clients the best in value and quality travel arrangements with award-winning service.</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide1.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Your #1 Traveling Guide</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Unique Travel</span><br><span class="font-weight-bold">Insights & Tips</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>Besides offering great tours, cruises, and excursions, we also regularly publish travel tips & tricks in our blog. Feel free to browse our website for detailed information!</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide2.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Pick any tour you want</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Wide Variety of</span><br><span class="font-weight-bold">Amazing Tours</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>At Hot Deals, we offer tours that let you visit the whole world, from exotic destinations to historic and religious ones. We can also customize any tour for you.</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide3.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</html>
