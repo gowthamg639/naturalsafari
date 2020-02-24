@@ -1,0 +1,1068 @@
+<html lang="en">
+   <head>
+      <title>carousel</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Sans|Source+Sans+Pro:300|Work+Sans&display=swap" rel="stylesheet">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="header.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  
+
+
+      <style type="text/css">
+
+      
+   body{
+      font-family: 'Work Sans';
+      user-select: none;
+   }
+   /*carousel whole wrapper*/
+
+   .wrapper {
+      width: 100%;
+      height: fit-content;
+   }
+
+   /*carousel whole wrapper*/
+
+   /*carousel inner wrapper*/
+   .inner_wrapper {
+      width: 100%;
+      height: fit-content;
+   }
+   /*carousel inner wrapper*/
+
+
+   /*carousel opacity transition start*/
+
+   .gowtham .carousel-fade .carousel-inner .item {
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: .7s;
+      transition-timing-function: linear;
+   }
+
+   .gowtham .carousel-fade .carousel-inner .active {
+      opacity: 1;
+      transition-timing-function: linear;
+   }
+
+   .gowtham .carousel-fade .carousel-inner .active.left,
+   .gowtham .carousel-fade .carousel-inner .active.right {
+      left: 0;
+      opacity: 0.9;
+      z-index: 1;
+   }
+
+   .gowtham .carousel-fade .carousel-inner .next.left,
+   .gowtham .carousel-fade .carousel-inner .prev.right {
+      opacity: 1;
+   }
+
+   .gowtham .carousel-fade .carousel-control {
+      z-index: 2;
+   }
+
+   @media all and (transform-3d),
+   (-webkit-transform-3d) {
+      .gowtham .carousel-fade .carousel-inner>.item.next,
+      .gowtham .carousel-fade .carousel-inner>.item.active.right {
+         opacity: 0;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+      .gowtham .carousel-fade .carousel-inner>.item.prev,
+      .gowtham .carousel-fade .carousel-inner>.item.active.left {
+         opacity: 0;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+      .gowtham .carousel-fade .carousel-inner>.item.next.left,
+      .gowtham .carousel-fade .carousel-inner>.item.prev.right,
+      .gowtham .carousel-fade .carousel-inner>.item.active {
+         opacity: 1;
+         -webkit-transform: translate3d(0, 0, 0);
+         transform: translate3d(0, 0, 0);
+      }
+   }
+
+   /*carousel opacity transition end*/
+
+
+
+   /*carousel indicators start*/
+
+   .gowtham .carousel-indicators li {
+      margin: 10px 10px 0 0;
+      background-color: rgb(232, 233, 238);
+      width: 15px;
+      height: 15px;
+      border: none;
+      transition-duration: .6s;
+      transition-timing-function: linear;
+   }
+
+   .gowtham .carousel-indicators .active {
+      background-color: rgba(255, 102, 0, 1);
+      width: 15px;
+      height: 15px;
+      border: none;
+      margin: 10px 10px 0 0;
+   }
+
+   /*carousel indicators end*/
+   
+  
+
+   
+   .gowtham .carousel-inner {
+      width: 100%;
+      height: 100%;
+   }
+
+   .gowtham .content-container {
+      display: flex;
+      height: 100%;
+   }
+
+   .content {
+      width: 50%;
+   }
+
+   .content img {
+      height: 100%;
+   }
+
+   .left_pannel {
+      background-color: rgb(247, 247, 247);
+   }
+
+   .content_message p {
+      max-width: 376px;
+      padding: 20px 0;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #74757f;
+      height: 160px;
+      max-height:160px;
+   }
+
+   .contact_us a {
+      width: 170px;
+      background-color: rgba(255, 102, 0, 1);
+      padding: 20px 50px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      border: 2px solid rgba(255, 102, 0, 1);
+      transition-duration: .6s;
+   }
+   .contact_us a:hover{
+      color: rgba(255, 102, 0, 1);
+      background-color: rgb(242, 242, 242);
+   }
+   .contact_us{
+      margin-top: 30px;
+   }
+
+   .font-weight-bold {
+      font-weight: 700!important;
+   }
+
+   .font-weight-light {
+      font-weight: 300!important;
+      font-family: Source Sans Pro;
+   }
+
+   .content_head h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin: 0;
+   }
+
+   .welcome_message {
+      text-transform: uppercase;
+      color: rgb(174, 177, 190);
+      font-size: 16px;
+      line-height: 1.2;
+      margin: 10px auto;
+   }
+
+@media screen and (min-width: 1360px) and (max-width: 9000px) {
+   .content-panel {
+      padding: 15% 0 10% 30%;
+   }      
+   .content_head h1 {
+      font-size: 58px;
+   }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1360px) {
+   .content-panel {
+      padding: 15% 0 10% 25%;
+   }      
+   .content_head h1 {
+      font-size: 53px;
+   }
+}
+@media screen and (min-width: 1101px) {
+   .content-panel {
+      padding: 15% 10% 15% 20%;
+   }
+   .content_head h1 {
+      font-size: 48px;
+   }
+   .content_message p {
+      max-width: 376px;
+      line-height: 1.5;
+      font-size: 14px;
+      height: 120px;
+      max-height:120px;
+   }
+}
+@media screen and (max-width: 1100px) and (min-width: 768px) {
+   .content-panel {
+      padding: 15% 10% 15% 13%;
+   }
+   .content_head h1 {
+      font-size: 38px;
+   }
+   .content_message p {
+      max-width: 376px;
+      padding: 20px 0;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #74757f;
+      height: 160px;
+      max-height:160px;
+   }
+}
+/*@media screen and (max-width: 1000px) and (min-width: 768px) {
+   .content-panel {
+      padding: 15% 10% 15% 10%;
+   }
+}*/
+/*@media screen and (max.content {
+         width: 100%;
+      }-width: 768px) {
+   .content-panel {
+      padding: 15% 0 15% 5%;
+   }
+   .content_head h1 {
+      font-size: 30px;
+   }
+}*/
+
+/*@media screen and (min-width: 1527px) {*/    
+/*}*/
+   
+
+
+   @media screen and (max-width: 767px) {
+      .left_pannel {
+         position: absolute;
+         background-color: rgb(0, 0, 0, 0.6);
+         color: rgb(255, 255, 255);
+         z-index: 1;
+         height: 100%;
+      }
+      .content{
+          width: 100%;
+      }
+      .content_head h1 {
+         font-size: 32px;
+         line-height: 1;
+         text-align: center;
+      }
+      .welcome_message {
+         color: rgb(244, 244, 244);
+         font-size: 14px;
+         line-height: 1;
+         font-weight: bold;
+         text-align: center;
+      }
+      .inner_wrapper {
+         height: 464px;
+      }
+      .content-panel {
+         padding: 10% 10% 10% 13%;
+      }
+      .content_message p {
+         color: rgb(255,255,255,0.8);
+         width: 100%;
+         max-width: 100%;
+         text-align: center;
+      }
+      .contact_us{
+         text-align: center;
+         margin-top: 40px;         
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      .gowtham .carousel-indicators {
+         text-align: right;
+         float: right;
+         left: 80%;
+         top: 10%;
+         display: flex;
+         flex-direction: column;
+         width: auto;
+      }
+   }
+
+  /* @media screen and (max-width: 400px) {
+      .content-panel {
+         padding: 1% 5% 1% 5%;
+      }
+      .content_head h1 {
+         font-size: 28px;
+         line-height: 1;
+         margin: 0;
+      }
+      .contact_us {
+         width: fit-content;
+         margin: auto;
+      }
+   }*/
+  /* @media screen and (max-width: 650px) {
+      .content-panel {
+         padding: 1% 2% 1% 2%;
+      }
+      .content_message p {
+         font-size: 14px;
+         margin: auto;
+         text-align: center;
+      }
+      .welcome_message {
+         color: rgb(244, 244, 244);
+         font-size: 14px;
+         line-height: 1;
+         margin: 20px auto;
+         text-align:center;
+      }
+      .content_head h1 {
+         font-size: 28px;
+         line-height: 1;
+         margin: 20px auto;
+         text-align: center;
+      }*/
+    /*  .contact_us a{
+         padding: 10px 35px;
+      }*/
+      /*.contact_us{
+         width: fit-content;
+         margin: 10px auto;
+      }
+      .carousel-indicators{
+         bottom: 1px;
+      }
+   }
+*/  
+/*.dummy_div{
+   height: 90px;
+}*/   
+   .nav_menu{
+      width: 30%;
+   } 
+   .nav_menu ul{
+      display: flex;
+      list-style-type: none;
+      width: 100%;
+      justify-content: space-around;
+      font-size:17px;
+   }
+   .nav_menu ul li{
+      padding: 0 15px;
+      text-align: center;
+      transition-duration: .5s;
+      cursor:pointer;
+
+   }
+   .navbar{
+      margin: 0;
+   }
+   .nav_menu ul li:hover{
+      background-color: rgba(255, 102, 0, 1);
+      color: rgba(255,255,255);
+      border-radius: 5px;
+   }
+   .nav_logo img{
+     width: 200px;
+   }
+   @media screen and (max-width: 768px) {
+      .nav_menu{
+         width: 60%;
+      }
+      .nav_menu ul{
+         width: 100%;
+         justify-content: flex-end;
+         font-size:14px;
+      }
+      .nav_menu ul li{
+         padding-left: 10px;
+      } 
+   }
+    @media screen and (max-width: 521px) {
+      .mobile_view:last-of-type{
+         display: none;
+      }
+      .nav_logo img{
+         width: 150px;
+      }
+      
+   }
+   @media screen and (max-width: 472px) {
+      .mobile_view{
+         display: none;
+      } 
+      .nav_logo img{
+         width: 120px;
+      }
+      .nav_menu{
+         width: 30%;
+      }
+       .nav_menu ul li{
+         padding-left: 8px;
+      } 
+      .nav_logo{
+         width: 60%;
+      }
+   }
+
+
+
+
+   /*akash css*/
+
+
+/* Common style */
+.akash .grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 300px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.akash .grid figure img {
+  position: relative;
+  display: block;
+  width: 320px;
+  opacity: 0.8;
+}
+
+.akash  .grid figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.akash  .grid figure figcaption::before,
+.akash  .grid figure figcaption::after {
+  pointer-events: none;
+}
+.akash .grid figure figcaption,
+.akash .grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*---------------*/
+/***** Bubba *****/
+/*---------------*/
+
+.akash figure.effect-bubba {
+  background: #9e5406;
+}
+
+.akash  figure.effect-bubba img {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+.akash  figure.effect-bubba:hover img {
+  opacity: 0.4;
+}
+
+.akash  figure.effect-bubba figcaption::before,
+.akash  figure.effect-bubba figcaption::after {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+.akash  figure.effect-bubba figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.akash figure.effect-bubba figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1,0);
+  transform: scale(1,0);
+}
+
+.akash  figure.effect-bubba h2 {
+  padding-top: 30%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,-20px,0);
+  transform: translate3d(0,-20px,0);
+}
+
+.akash figure.effect-bubba p {
+  padding: 20px 2.5em;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+
+.akash figure.effect-bubba:hover figcaption::before,
+.akash figure.effect-bubba:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+  /* opacity: 1; */
+/* } */
+
+
+.akash .slide-box {
+display: flex;
+justify-content: space-between;
+}
+.akash .style_prevu_kit
+{
+  display:inline-block;
+  position: relative;
+  border-radius: 10px;
+  transition: all 150ms ease-in;
+  transform: scale(1);   
+
+}
+.akash .style_prevu_kit:hover
+{
+  z-index: 2;
+  transition: all 200ms ease-in;
+  border-radius: 7px;
+  transform: scale(1.3);
+}
+.abt_us{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(243,243,243);
+        font-family: 'Montserrat';
+      }
+      .abt_button{
+    max-width: 300px;
+    height: 54px;
+    border: none;
+    background: #f35f55;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+
+      }
+      .abt_welcome_message{
+        padding: 14px;
+        color: #353535;
+        font-size: 34px;
+        letter-spacing: 1px;
+      }
+       .abt_message{
+        padding: 14px;
+        max-width: 525px;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 17px;
+        color:#353535;
+      }
+@media screen and (max-width: 530px) {
+.akash .carousel-inner {
+  margin-left: 0 !important;
+  padding: 0px !important;
+}
+}
+
+@media screen and (max-width: 530px) {
+    .abt_us {
+        padding: 10px !important;
+    }
+    .abt_welcome_message {
+        font-size: 26px;
+    }
+}
+.annimals-visit {
+            position: relative;
+             overflow: hidden;
+            display: block;
+            width: 48%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 0 25px 0 rgba(0,0,0,.05);
+        }
+        .third{
+            width: 98%;
+        }
+        .zoom-effect-container {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.image-card img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.2);
+}
+        .slide-box {
+          display: flex;
+          justify-content: space-between;
+        }
+        @media screen and (max-width: 962px) {
+  #whole {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1522px) {
+  .ak{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sl{
+      margin-left: 0 !important;
+  }
+  .third{
+    width: 93%;
+  }
+}
+@media screen and (max-width: 388px) {
+    .sec {
+        padding: 10% !important;
+    }
+    .third{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 644px) {
+    .sl {
+        margin-left: -111% !important;
+    }
+    .last{ width: 100% !important;}
+    .third{
+    width: 100%;
+  }
+}
+
+.footer_wrapper .fa:hover {
+    opacity: 0.8;
+}
+
+.footer_wrapper .fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.footer_wrapper .fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.footer_wrapper .fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.footer_wrapper .fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.footer_wrapper .fa-instagram {
+  background: #125688;
+  color: white;
+}
+.footer_wrapper{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Lato';
+}
+.footer_wrapper .panels{
+  border:1px solid #24324a;
+  width: 50%;
+  text-align: center;
+  background-color: #344157;
+  color: rgb(255,255,255);
+  padding: 3%;
+}
+.footer_wrapper .social_media{
+  text-align: left;
+}
+.footer_wrapper .social_media div{
+  padding: 10px;
+}
+.footer_wrapper .contact{
+  text-align: right;
+}
+.footer_wrapper .contact div{
+  padding: 10px;
+}
+.footer_wrapper .contact_num{
+  margin: 0;
+  padding: 0;
+  font-size: 35px;
+}
+.footer-bottom{
+  background-color: #24324a;
+  color: rgb(255,255,255,0.5);
+  text-align: center;
+  padding: 30px;
+  font-family: 'Lato';
+}
+.footer-contact li{
+  list-style-type: none;
+  font-family: 'Lato';
+  display: inline-block;
+}
+/*.footer-copyright{
+  margin-left:40px;
+}*/
+.footer-contact li a{
+  text-decoration:none;
+  color: rgb(255,255,255,0.5);
+}
+.footer_wrapper .fa {
+  padding: 8px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px 5px 0;
+  border-radius: 50%;
+}
+.footer-logo{
+  width:300px; 
+}
+#carousel{
+  width: 100%;
+  overflow:hidden;
+}
+</style>
+   </head>
+   <body onload="canLoadImage()">
+  
+
+      <div class="wrapper">
+         <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="nav_logo">
+               <img src="logo.png">
+            </div>
+            <div class="nav_menu">
+               <ul>
+                  <li>HOME</li>
+                  <li class="mobile_view">MENU</li>
+                  <li>BOOKINGS</li>
+                  <li class="mobile_view">ABOUT</li>
+               </ul>
+            </div>
+         </nav>
+         <div class="inner_wrapper carousel-inner gowtham">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="4000">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Welcome to our Travel agency</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Enjoy Your</span><br><span class="font-weight-bold">Dream Vacation</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>Since 1999, Hot Deals has been committed to bringing our clients the best in value and quality travel arrangements with award-winning service.</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide1.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Your #1 Traveling Guide</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Unique Travel</span><br><span class="font-weight-bold">Insights & Tips</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>Besides offering great tours, cruises, and excursions, we also regularly publish travel tips & tricks in our blog. Feel free to browse our website for detailed information!</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide2.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <div class="content-container">
+                        <div class="content left_pannel">
+                           <div class="content-panel">
+                              <div class="welcome_message">Pick any tour you want</div>
+                              <div class="content_head">
+                                 <h1><span class="font-weight-light">Wide Variety of</span><br><span class="font-weight-bold">Amazing Tours</span></h1>
+                              </div>
+                              <div class="content_message">
+                                 <p>At Hot Deals, we offer tours that let you visit the whole world, from exotic destinations to historic and religious ones. We can also customize any tour for you.</p>
+                              </div>
+                              <div class="contact_us">
+                                 <a class="button" href="#">CONTACT US</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="content right_panel">
+                           <img  src="slide3.jpg" alt="New york" style="width:100%;">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+       
+
+      <!--akash-->
+      <div class="container-fluid akash" style="padding: 10px; background: #353535; overflow: hidden;">
+        <div class="container" style="padding: 20px;">
+            <h1 style="color: #fff; text-align: center; font-size: 36px;"><span class="font-weight-bold">Dream Vacation</span></h1>
+        </div>
+        <div class="row">
+          <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner" style="margin-left: 4%; padding: 36px;">
+              <div class="carousel-item active">
+                  <div class="slide-box" id="picattach">
+                  </div>
+              </div>
+               <div class="carousel-item">
+                <div class="slide-box" id='picattach2'>
+              </div>
+            <!-- </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="container-fluid abt_us" style="padding:70px; background-color: #fff">
+        <div class="abt_welcome_message">LET'S GO WITH US</div>
+        <h1 class="abt_head" style="color:#353535">Start Your Journey</h1>
+        <p class="abt_message">Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+        <div class="contact_us">
+            <a class="button" href="#">CONTACT US</a>
+         </div>
+      </div>
+      <div class="container-fluid" style="background-image: url('back.jpg'); padding: 70px 0 85px; background-repeat: no-repeat; background-size: cover;" id="whole">
+        <div class="d-flex ak" style="max-width:1677px; margin:auto;">
+            <div class="container" style="padding: 10px;">
+                <div id="carouselExampleControls" class="carousel slide sl" data-ride="carousel" style="margin-left: -30%;">
+              <div class="carousel-inner third">
+                <div class="carousel-item active">
+                  <div class="slide-box" id='picattach2'>
+                    <div class="card annimals-visit ">
+                        <div class="zoom-effect-container">
+                            <div class="image-card">
+                                <img src="h.jpg" class="card-img-top" alt="...">
+                            </div>
+                          </div>
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                    <div class="card annimals-visit">
+                        <div class="zoom-effect-container">
+                            <div class="image-card">
+                                <img src="h.jpg" class="card-img-top" alt="...">
+                            </div>
+                          </div>
+                      <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slide-box">
+                      <div class="card annimals-visit">
+                        <div class="zoom-effect-container">
+                            <div class="image-card">
+                                <img src="h.jpg" class="card-img-top" alt="...">
+                            </div>
+                          </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                      
+                      <div class="card annimals-visit">
+                        <div class="zoom-effect-container">
+                            <div class="image-card">
+                                <img src="h.jpg" class="card-img-top" alt="...">
+                            </div>
+                          </div>
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            </div>
+            <div class="container" style="padding: 10px;">
+                <div class="block-5 block-centered sec" style="padding: 50px;">
+                    <div class="d-flex">
+                      <h1 class="" style=" color: #fff;">Last <br> Minute</h1>
+                      <p class="" style="font-size: 46px; color: #fff;">Offers</p>
+                    </div>
+                    <h4 class="mt-20 mt-xl-40 wow fadeIn last"style="line-height: 1.7; color: #fff; width: 71%;">We have picked some amazing last minute holiday offers for you to choose from. These offers won’t last too long so hurry and book yours today!</h4>
+                  </div>
+            </div> 
+            </div>
+        </div>
+      
+  </div>
+
+      <!--akash-->
+
+        <div class="footer_wrapper">
+    <div class="social_media panels">
+      <div>SOCIAL MEDIA</div>
+      <div>FOLLOW SRI TOURISM</div>
+      <div class="social_links">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
+    <div class="contact panels">
+      <div>NEWSLETTER</div>
+      <div>WE LOVE TO SHARE NEW OFFERS AND EXLUSIVE PROMOTIONS</div>
+      <div class="contact_num">
+        <a href="tel:5551234567" style="text-decoration:none; color:'rgb(255,255,255,0.5)'">+91 82200220022</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+          <div class="wrapper">
+              <div class="footer-logo">
+                  <img src="logo.png"alt="SRI TOURISM">
+              </div>
+              <div class="footer-copyright">
+                  <p>COPYRIGHT © SRI TOURISM</p>
+              </div>
+              <div class="footer-contact">
+                  <ul>
+                      <li><i class="fa fa-map-marker"></i> LONGRIDGE ROAD, EARLS COURT, LONDON</li>
+                      <li><i class="fa fa-phone"></i> +1-800-123-45-67</li>
+                      <li><a href="mailto:sritourism@gmail.com"><i class="fa fa-paper-plane"></i>SRITOURISM@GMAIL.COM</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+   </body>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script>
+    function canLoadImage(){
+        var arr= ['o.jpg', 'o.jpg','o.jpg', 'o.jpg', 'camp.jpg']
+        var arr2= ['camp.jpg', 'camp.jpg','camp.jpg', 'camp.jpg','camp.jpg']
+        var container = document.getElementById('picattach');
+        var container1 = document.getElementById('picattach2');
+for (var i = 0; i<arr.length;  i++) {
+  var k = '<div class="grid"><figure class="effect-bubba style_prevu_kit"><img src="'+ arr[i]+'" alt="img16"/><figcaption><h2>Fresh <span>Bubba</span></h2></figcaption></figure></div>';
+  container.innerHTML+=k;
+}
+for (var i = 0; i<arr2.length;  i++) {
+  var k = '<div class="grid"><figure class="effect-bubba style_prevu_kit"><img src="'+ arr2[i]+'" alt="img16"/><figcaption><h2>Fresh <span>Bubba</span></h2></figcaption></figure></div>';
+  container1.innerHTML+=k;
+}
+    }
+</script>
+</html>
